@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Header from './Header';
-import Footer from './Footer';
 import CreateNote from './CreateNote';
 import Note from './Note';
+import Footer from './Footer';
 
 
 const App = () => {
-  const[addItem, setItem] = useState();
+  const[addItem, setItem] = useState([]);
 
   const addNote = (note) => {
    setItem((preData)=>{
