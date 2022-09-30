@@ -4,7 +4,7 @@ import AddIcon from '@mui/icons-material/Add';
 
 
 const CreateNote = (props) => {
-  const [expand, setExpand] = useState(false);
+  const [expand, setExpand] = useState(true);
 
   const [note, setNote] = useState({
     title:"",
@@ -12,9 +12,6 @@ const CreateNote = (props) => {
   });
 
   const InputEvent = (event) => {
-
-    // const value = event.target.value;
-    // const name = event.target.name;       object destructuring
      const{name,value} = event.target;
 
    setNote((preData) => {
@@ -39,6 +36,7 @@ const CreateNote = (props) => {
 
   return(
     <>
+    <div className="container">
     <div className="main-note">
         <form>
             {expand?
@@ -65,6 +63,7 @@ const CreateNote = (props) => {
                <AddIcon  className="add"/>
             </Button>
         </form>
+    </div>
     </div>
     </>
   );

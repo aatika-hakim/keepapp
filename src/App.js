@@ -5,6 +5,7 @@ import Note from './Note';
 import Footer from './Footer';
 
 
+
 const App = () => {
   const[addItem, setItem] = useState([]);
 
@@ -14,19 +15,20 @@ const App = () => {
    });
   };
   const onDelete = (id) => {
-    setItem((oldData)=>{
-    oldData.filter((currentData, indx)=>{
-      return indx !== id
-    });
+    setItem((preData)=>{
+    return preData.filter((currentData, indx)=>{
+      return indx !== id;
+     });
   });
 }
 
   return(
     <>
-      <Header />
+   
+      <Header /> 
+      <div className='page-container'>
       <CreateNote passNote = {addNote}/>
-      <Note /> 
-
+     
       { addItem.map((val, index)=>{
         return( <Note 
           key = {index}
@@ -35,11 +37,13 @@ const App = () => {
           content={val.content}
           deleteItem={onDelete}
         />
-        );
-      })
-      }
+        ); })}
 
-      <Footer />
+      </div>
+      
+    
+
+        <Footer />
     </>
   );
 }

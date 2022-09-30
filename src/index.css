@@ -1,8 +1,14 @@
 *{
   margin: 0;
   padding: 0;
+ 
   box-sizing: border-box;
   font-family: "Josefin Sans","Arial Narrow";
+}
+
+
+.container{
+  min-height: fit-content;
 }
 
 .header{
@@ -11,6 +17,7 @@
   background-color: #f4b400;
   display: flex;
   justify-content: start;
+  color: white;
   padding-left: 50px ;
   box-shadow: 3px 5px 15px -5px black;
 }
@@ -45,8 +52,12 @@
 
 footer{
   height: 30px;
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
   width:100%;
-  bottom: 0;  
+  margin-bottom: 0;
   background-color: orange;
   color: aliceblue;
   text-align: center;
@@ -57,9 +68,10 @@ footer{
   padding: 15px 10px 5px 10px;
   margin: 20px auto;
 }
-.my_notes h1{
+.note h1{
   color: #34495e;
-}.my_notes p{
+}
+.note p{
   color: grey;
 }
 form{
